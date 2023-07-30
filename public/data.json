@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Task 1",
+        "id": 1,
+        "end_date": "2023-08-15",
+        "description": "Complete project milestone 1.",
+        "img": "https://codeboxr.net/themedemo/unialumni/html/assets/images/event/event-img-1.jpg"
+    },
+    {
+        "title": "Meeting with Team",
+        "id": 2,
+        "end_date": "2023-08-05",
+        "description": "Discuss progress and plan for the next sprint.",
+        "img": "https://codeboxr.net/themedemo/unialumni/html/assets/images/event/event-img-3.jpg"
+    },
+    {
+        "title": "Submit Report",
+        "id": 3,
+        "end_date": "2023-08-10",
+        "description": "Submit quarterly performance report to management.",
+        "img": "https://codeboxr.net/themedemo/unialumni/html/assets/images/event/event-img-4.jpg"
+    },
+    {
+        "title": "Workshop Registration",
+        "id": 4,
+        "end_date": "2023-08-20",
+        "description": "Register for the upcoming professional development workshop.",
+        "img": "https://codeboxr.net/themedemo/unialumni/html/assets/images/event/event-img-4.jpg"
+    }
+]

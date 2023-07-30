@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "img": "john_doe.jpg",
+        "role": "Student",
+        "department": "Computer Science",
+        "batch": "2021",
+        "campus": "Main Campus"
+    },
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "img": "jane_smith.jpg",
+        "role": "Faculty",
+        "department": "Electrical Engineering",
+        "batch":"Student",
+        "campus": "North Campus"
+    },
+    {
+        "id": 3,
+        "name": "Michael Johnson",
+        "img": "michael_johnson.jpg",
+        "role": "Staff",
+        "department": "Administration",
+        "batch": "Student",
+        "campus": "South Campus"
+    },
+    {
+        "id": 4,
+        "name": "Michael Johnson",
+        "img": "michael_johnson.jpg",
+        "role": "Staff",
+        "department": "Administration",
+        "batch": "Student",
+        "campus": "South Campus"
+    },
+    {
+        "id": 5,
+        "name": "Michael Johnson",
+        "img": "michael_johnson.jpg",
+        "role": "Staff",
+        "department": "Administration",
+        "batch": "Student",
+        "campus": "South Campus"
+    }
+]
