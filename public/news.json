@@ -1,0 +1,52 @@
+[
+    {
+        "article_id": 1,
+        "article_title": "Groundbreaking Research at XYZ University",
+        "article_date": "2023-08-07",
+        "article_author": "John Smith",
+        "article_category": "Education",
+        "article_summary": "XYZ University researchers make significant progress in renewable energy technology.",
+        "article_content": "In a groundbreaking development, researchers from XYZ University have achieved a major breakthrough in the field of renewable energy technology...",
+        "article_image": "https://example.com/images/xyz_university_research.jpg"
+    },
+    {
+        "article_id": 2,
+        "article_title": "New Campus Building Inauguration at ABC University",
+        "article_date": "2023-08-07",
+        "article_author": "Emily Johnson",
+        "article_category": "Campus News",
+        "article_summary": "ABC University celebrates the grand opening of its state-of-the-art Science and Technology Center.",
+        "article_content": "ABC University proudly inaugurated its latest addition to the campus, the state-of-the-art Science and Technology Center, on a bright Saturday morning...",
+        "article_image": "https://example.com/images/abc_university_inauguration.jpg"
+    },
+    {
+        "article_id": 3,
+        "article_title": "Scholarship Program Expanded at LMN University",
+        "article_date": "2023-08-07",
+        "article_author": "Sarah Roberts",
+        "article_category": "Education",
+        "article_summary": "LMN University announces an expansion of its scholarship program to support more students.",
+        "article_content": "In a bid to make higher education more accessible, LMN University has announced a significant expansion of its scholarship program...",
+        "article_image": "https://example.com/images/lmn_university_scholarship.jpg"
+    },
+    {
+        "article_id": 4,
+        "article_title": "Global Health Initiative Launched by PQR University",
+        "article_date": "2023-08-07",
+        "article_author": "David Miller",
+        "article_category": "Health",
+        "article_summary": "PQR University embarks on a comprehensive global health initiative to address pressing health challenges.",
+        "article_content": "Recognizing the urgency of addressing global health issues, PQR University has launched a comprehensive global health initiative...",
+        "article_image": "https://example.com/images/pqr_university_health.jpg"
+    },
+    {
+        "article_id": 5,
+        "article_title": "Innovative Arts Festival at UVW University",
+        "article_date": "2023-08-07",
+        "article_author": "Jessica Lee",
+        "article_category": "Arts & Culture",
+        "article_summary": "UVW University hosts an inspiring arts festival showcasing the creativity of its students.",
+        "article_content": "UVW University's campus came alive with creativity during its annual arts festival, a vibrant celebration of artistic expression and talent...",
+        "article_image": "https://example.com/images/uvw_university_arts.jpg"
+    }
+]

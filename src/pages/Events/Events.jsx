@@ -6,8 +6,10 @@ import EventCard from './EventCard';
 const Events = () => {
 
   const [events, setEvents] = useState([]);
+
+
   useEffect(() => {
-    fetch("data.json")
+    fetch("http://localhost:5000/data")
       .then(res => res.json())
       .then(data => {
         setEvents(data)
@@ -22,14 +24,6 @@ const Events = () => {
 
       <PageBanner />
 
-      <p>data : {events.length}</p>
-
-      {events.map((event) => {
-        <li>{event.title}</li>
-      })}
-
-
-
 
       <div className='my-10'>
 
@@ -38,7 +32,7 @@ const Events = () => {
         <div className='flex flex-col'>
           {
             events.map((data) => {
-              <EventCard key={data.id} event={data} />
+              return <EventCard key={data.id} data={data} />
 
             })
           }
