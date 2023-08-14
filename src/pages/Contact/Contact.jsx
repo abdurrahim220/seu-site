@@ -12,7 +12,7 @@ const Contact = () => {
             <div className='my-10'>
                 <div className="hero mx-auto flex max-w-screen-lg bg-base-200">
                     <div className="hero-content flex-col lg:flex-row">
-                        <img src="https://scontent.fdac24-4.fna.fbcdn.net/v/t39.30808-6/351755008_6292899310802063_337581231130957764_n.jpg?_nc_cat=101&cb=99be929b-59f725be&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeEB8jZa2i0fc8WJFIl-1YljyRwm2R7YiOfJHCbZHtiI58QBgA0M2VALiUnTE58FqP0_0-XCsR7nIaNAE71qfsPX&_nc_ohc=JPFUvXkSaY0AX9ezygo&_nc_ht=scontent.fdac24-4.fna&oh=00_AfB1Pardc64B1MAKUHt037NTNfoP6utCAZ47gQlDrj4vjw&oe=64CC6532" className="max-w-sm rounded-lg shadow-2xl" />
+                        <img src="https://i.ibb.co/RvSR2xs/366804109-251573701096367-4355361459422857294-n.jpg" className="max-w-sm rounded-lg shadow-2xl" />
                     </div>
 
 

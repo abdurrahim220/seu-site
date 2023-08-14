@@ -8,6 +8,7 @@ import Contact from "../pages/Contact/Contact";
 import Register from "../pages/Pages/Register/Register";
 import Committee from "../pages/Pages/Committee/Committee";
 import Members from "../pages/Pages/Members/Members";
+import EventsDetails from "../pages/Events/EventsDetails";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       { path: "/members", element: <Members /> },
     ],
   },
+  {
+    path:'/eventsDetails',
+    element:<EventsDetails/>
+  }
 ]);
 
 export default router;

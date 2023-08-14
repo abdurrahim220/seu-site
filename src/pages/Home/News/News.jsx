@@ -10,25 +10,19 @@ const News = () => {
             setNews(data);
         })
     }, [])
+
+
     return (
-        <div className='bg-[#ecf1f5] mt-10'>
+        <div className='bg-[#ecf1f5] mt-10 mx-auto '>
             <div>
                 <h1 className='text-center'>News</h1>
-                <h1>length: {news.length}</h1>
-
-
-                <div className='mx-auto grid grid-cols-1 md:grid-cols-2 gap-3 justify-items-center lg:grid-cols-3'>
-
-
+                <div className='mx-auto grid grid-cols-1 max-w-screen-xl md:grid-cols-2 gap-3 justify-items-center lg:grid-cols-3'>
                     {
-                        news.map(data => {
-                            <NewsCard key={data.id} data={data}></NewsCard>
+                        news.slice(0,3).map(data => {
+                         return   <NewsCard key={data.id} data={data}></NewsCard>
                         })
                     }
-
-                </div>
-
-                
+                </div>                
             </div>
         </div>
     )

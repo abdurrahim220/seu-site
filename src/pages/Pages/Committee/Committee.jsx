@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Committee = () => {
+  const [committee, setCommittee] = useState([]);
+
+  useEffect(() => {
+
+  }, []);
+  
   return (
     <div>Committee</div>
   )

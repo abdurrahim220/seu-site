@@ -3,8 +3,8 @@ import React from 'react'
 const MembersCard = ({ member }) => {
     const { name, img, role, department, campus, batch } = member;
     return (
-        <tbody>
-            {/* row 1 */}
+      
+            
             <tr>
 
                 <td>
@@ -28,7 +28,7 @@ const MembersCard = ({ member }) => {
                 <td>{role}</td>
             </tr>
 
-        </tbody>
+        
     )
 }
 
