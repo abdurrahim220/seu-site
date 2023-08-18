@@ -34,10 +34,12 @@ const Gallery = () => {
           </TabList>
 
           <TabPanel>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {
                 gallerys.map((gallery) => {
-                  return <img src={gallery.image_url} key={gallery._id} alt="" srcset="" />
+                  return <div className="gap-4 grid">
+                    <img className="h-auto max-w-full rounded-lg" src={gallery.image_url} key={gallery._id} alt="" srcset="" />
+                  </div>
                 })
               }
             </div>
@@ -45,7 +47,7 @@ const Gallery = () => {
           <TabPanel>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {
-                gallerys.slice(6,10).map((gallery) => {
+                gallerys.slice(6, 10).map((gallery) => {
                   return <img src={gallery.image_url} key={gallery._id} alt="" srcset="" />
                 })
               }</div>
