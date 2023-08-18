@@ -8,13 +8,16 @@ const Events = () => {
   const [events, setEvents] = useState([]);
 
 
+
   useEffect(() => {
-    fetch("http://localhost:5000/data")
+    fetch("http://localhost:5000/events")
       .then(res => res.json())
       .then(data => {
         setEvents(data)
+       // console.log(data)
       })
   }, []);
+
 
   return (
     <div>
@@ -29,10 +32,10 @@ const Events = () => {
 
 
 
-        <div className='flex flex-col'>
+        <div className='flex flex-col gap-3'>
           {
-            events.map((data) => {
-              return <EventCard key={data.id} data={data} />
+            events.slice(0,4).map((data) => {
+              return <EventCard key={data._id} data={data} />
 
             })
           }

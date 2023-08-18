@@ -22,13 +22,17 @@ const router = createBrowserRouter([
       { path: "/contact", element: <Contact /> },
       { path: "/register", element: <Register /> },
       { path: "/committee", element: <Committee /> },
-      { path: "/members", element: <Members /> },
+      { path: "/members", element: <Members /> }, {
+        path: '/eventsDetails/:id',
+        element: <EventsDetails />,
+        loader: ({ params }) => fetch(`http://localhost:5000/events/${params.id}`)
+      },
+
+
     ],
+
   },
-  {
-    path:'/eventsDetails',
-    element:<EventsDetails/>
-  }
+
 ]);
 
 export default router;

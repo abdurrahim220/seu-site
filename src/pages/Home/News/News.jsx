@@ -13,10 +13,10 @@ const News = () => {
 
 
     return (
-        <div className='bg-[#ecf1f5] mt-10 mx-auto '>
-            <div>
+        <div className='bg-[#ecf1f5]'>
+            <div className='my-10'>
                 <h1 className='text-center'>News</h1>
-                <div className='mx-auto grid grid-cols-1 max-w-screen-xl md:grid-cols-2 gap-3 justify-items-center lg:grid-cols-3'>
+                <div className='mx-auto grid grid-cols-1 container md:grid-cols-2 gap-3 justify-items-center lg:grid-cols-3'>
                     {
                         news.slice(0,3).map(data => {
                          return   <NewsCard key={data.id} data={data}></NewsCard>
