@@ -9,7 +9,7 @@ import News from '../News/News'
 
 const Home = () => {
   return (
-    <div>
+    <div className='font-serif'>
       <Helmet>
         <title>SEU || Home</title>
       </Helmet>
