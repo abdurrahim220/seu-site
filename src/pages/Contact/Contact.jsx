@@ -9,15 +9,15 @@ const Contact = () => {
             <title>SEU || contact</title>
         </Helmet>
             <PageBanner />
-            <div className='my-10'>
-                <div className="hero mx-auto flex max-w-screen-lg bg-base-200">
+            <div className='min-h-screen flex items-center'>
+                <div className="hero mx-auto flex gap-5 items-center max-w-screen-lg bg-base-200">
                     <div className="hero-content flex-col lg:flex-row">
                         <img src="https://i.ibb.co/RvSR2xs/366804109-251573701096367-4355361459422857294-n.jpg" className="max-w-sm rounded-lg shadow-2xl" />
                     </div>
 
 
-                    <div className=''>
-                        <h1 className="text-2xl font-bold">SEND MESSAGE</h1>
+                    <div className='px-10'>
+                        <h1 className="text-2xl font-bold mb-3">SEND MESSAGE</h1>
 
                         <form onSubmit="">
                             <div className='flex flex-row gap-3'>

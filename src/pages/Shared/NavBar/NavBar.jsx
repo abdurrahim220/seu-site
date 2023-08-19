@@ -14,6 +14,9 @@ const NavBar = () => {
         <Link to="/events">Events</Link>
       </li>
       <li>
+        <Link to="/contest">Contest</Link>
+      </li>
+      <li>
         <Link to="/gallery">Gallery</Link>
       </li>
       <li tabIndex={0}>

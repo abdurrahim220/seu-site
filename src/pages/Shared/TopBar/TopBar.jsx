@@ -11,8 +11,8 @@ const TopBar = () => {
                 </div>
                 <div className='flex gap-3'>
 
-                    <Link to="/register" className='bg-[#3b60c9] hover:bg-[#1dd983] px-[30px] py-[5px] text-lg font-bold text-white'>login</Link>
-                    <Link to="/register" className='bg-[#1dd983] hover:bg-[#3b60c9] px-[30px] py-[5px] text-lg font-bold text-white'>Sign Up</Link>
+                    <Link to="/login" className='bg-[#3b60c9] hover:bg-[#1dd983] px-[30px] py-[5px] text-lg font-bold text-white'>login</Link>
+                    <Link to="/reg" className='bg-[#1dd983] hover:bg-[#3b60c9] px-[30px] py-[5px] text-lg font-bold text-white'>Sign Up</Link>
 
                 </div>
             </div>

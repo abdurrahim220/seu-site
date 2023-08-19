@@ -10,6 +10,9 @@ import Committee from "../pages/Pages/Committee/Committee";
 import Members from "../pages/Pages/Members/Members";
 import EventsDetails from "../pages/Events/EventsDetails";
 import NewsDetails from "../pages/Home/News/NewsDetails";
+import Contest from "../pages/Contest/Contest";
+import Login from "../pages/Login/Login";
+import Reg from "../pages/Reg/Reg";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +24,7 @@ const router = createBrowserRouter([
       { path: "/events", element: <Events /> },
       { path: "/gallery", element: <Gallery /> },
       { path: "/contact", element: <Contact /> },
+      { path: "/contest", element: <Contest /> },
       { path: "/register", element: <Register /> },
       { path: "/committee", element: <Committee /> },
       { path: "/members", element: <Members /> }, {
@@ -32,9 +36,15 @@ const router = createBrowserRouter([
         path:'/newsDetails/:id',
         element:<NewsDetails/>,
         loader:({params}) => fetch(`http://localhost:5000/news/${params.id}`)
+      },
+      {
+        path:'/login',
+        element:<Login/>
+      },
+      {
+        path:'/reg',
+        element:<Reg/>
       }
-
-
     ],
 
   },

@@ -6,11 +6,11 @@ import TopBar from '../pages/Shared/TopBar/TopBar'
 
 const Main = () => {
   return (
-    <div>
-      <TopBar/>
-        <NavBar/>
-        <Outlet/>
-        <Footer/>
+    <div>   
+      <TopBar />    
+      <NavBar />
+      <Outlet />
+      <Footer />
     </div>
   )
 }

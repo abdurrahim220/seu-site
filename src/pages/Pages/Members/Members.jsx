@@ -54,7 +54,7 @@ const Members = () => {
                                 <th className='text-center text-[2rem] px-4 py-5 border-4 border-[#e9ecef]'>Name</th>
                                 <th className='text-center text-[2rem] px-4 py-5 border-4 border-[#e9ecef]'>Department</th>
                                 <th className='text-center text-[2rem] px-4 py-5 border-4 border-[#e9ecef]'>Batch</th>
-                                <th className='text-center text-[2rem] px-4 py-5 border-4 border-[#e9ecef]'>Campus</th>
+                                <th className='text-center text-[2rem] px-4 py-5 border-4 border-[#e9ecef]'>ClubName</th>
                                 <th className='text-center text-[2rem] px-4 py-5 border-4 border-[#e9ecef]'>Role</th>
                             </tr>
                         </thead>
