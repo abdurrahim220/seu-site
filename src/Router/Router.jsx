@@ -9,6 +9,7 @@ import Register from "../pages/Pages/Register/Register";
 import Committee from "../pages/Pages/Committee/Committee";
 import Members from "../pages/Pages/Members/Members";
 import EventsDetails from "../pages/Events/EventsDetails";
+import NewsDetails from "../pages/Home/News/NewsDetails";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
         element: <EventsDetails />,
         loader: ({ params }) => fetch(`http://localhost:5000/events/${params.id}`)
       },
+      {
+        path:'/newsDetails/:id',
+        element:<NewsDetails/>,
+        loader:({params}) => fetch(`http://localhost:5000/news/${params.id}`)
+      }
 
 
     ],
