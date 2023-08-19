@@ -18,7 +18,7 @@ const NavBar = () => {
       </li>
       <li tabIndex={0}>
         <details>
-          <summary>Pages</summary>
+          <summary className="">Pages</summary>
           <ul className="p-2">
             <li><Link to="/register">Register</Link></li>
             <li><Link to="/members">Members</Link></li>
