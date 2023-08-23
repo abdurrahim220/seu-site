@@ -6,7 +6,7 @@ const News = () => {
     const [news, setNews] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/news`).then(res => res.json()).then(data => {
+        fetch(`https://server2-psi.vercel.app/news`).then(res => res.json()).then(data => {
             setNews(data);
         })
     }, [])

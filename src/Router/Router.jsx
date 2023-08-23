@@ -13,6 +13,7 @@ import NewsDetails from "../pages/Home/News/NewsDetails";
 import Contest from "../pages/Contest/Contest";
 import Login from "../pages/Login/Login";
 import Reg from "../pages/Reg/Reg";
+import JobsDetails from "../pages/Home/Job/JobsDetails";
 
 const router = createBrowserRouter([
   {
@@ -30,12 +31,17 @@ const router = createBrowserRouter([
       { path: "/members", element: <Members /> }, {
         path: '/eventsDetails/:id',
         element: <EventsDetails />,
-        loader: ({ params }) => fetch(`http://localhost:5000/events/${params.id}`)
+        loader: ({ params }) => fetch(`https://server2-psi.vercel.app/events/${params.id}`)
       },
       {
         path:'/newsDetails/:id',
         element:<NewsDetails/>,
-        loader:({params}) => fetch(`http://localhost:5000/news/${params.id}`)
+        loader:({params}) => fetch(`https://server2-psi.vercel.app/news/${params.id}`)
+      },
+      {
+        path:'/jobsDetails/:id',
+        element:<JobsDetails/>,
+        loader:({params}) => fetch(`http://localhost:5000/jobs/${params.id}`)
       },
       {
         path:'/login',

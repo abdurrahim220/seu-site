@@ -1,65 +1,89 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from 'react'
+import { useState } from 'react'
+
+import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
+import { FaDotCircle } from 'react-icons/fa';
+import EventCard from '../../Events/EventCard';
 
 
-
-import img from "../../../assets/Roboto/1.jpg";
-import img2 from "../../../assets/Roboto/2.jpg";
-import img3 from "../../../assets/Roboto/3.jpg";
-import img4 from "../../../assets/Roboto/4.jpg";
 
 const Banner = () => {
-  const [imgs, setImage] = useState([]);
-  useEffect(() => {
-    fetch("events.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setImage(data);
-      });
-  }, []);
+
+  // const [events, setEvents] = useState([]);
+
+  // const [page, setPage] = useState(1)
+  // const [limit, setLimit] = useState(1)
+
+  // useEffect(() => {
+  //   fetch(`https://server2-psi.vercel.app/events?limit=${limit}&page=${page}`)
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setEvents(data)
+  //     })
+  // }, []);
+
+  const slides = [
+    { url: "https://i.ibb.co/frXH6DX/366357667-251573614429709-6683106828939593557-n.jpg" },
+    { url: "https://i.ibb.co/d70x1Bd/366800092-251573847763019-5536209276254022446-n.jpg" },
+    { url: "https://i.ibb.co/7GNw5CT/366800826-251573807763023-722381529471720335-n.jpg" },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prev = () => setCurrentIndex(currentIndex => currentIndex === 0 ? slides.length - 1 : currentIndex - 1);
+
+  const next = () => setCurrentIndex((currentIndex) => (currentIndex === slides.length - 1 ? 0 : currentIndex + 1));
+
+  const goToSlide = (slidesIndex) => {
+    setCurrentIndex(slidesIndex)
+  }
 
   return (
     <>
+      <div className='max-w-screen-2xl h-[780px] w-full m-auto relative group'>
+        <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full bg-current bg-cover duration-500'>
 
-      <div className="carousel w-full">
-        {/* Slide 1 */}
-        <div id="slide1" className="carousel-item relative w-full">
-          <img src="/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
-          <div className="absolute flex justify-center top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
-            <a href="#slide4" className="btn btn-circle">❮</a>
-            <a href="#slide2" className="btn btn-circle">❯</a>
-          </div>
+        </div>
+        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+          <HiOutlineChevronLeft size={40} onClick={prev} />
+        </div>
+        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+
+
+          <HiOutlineChevronRight size={40} onClick={next} />
         </div>
 
-        {/* Slide 2 */}
-        <div id="slide2" className="carousel-item relative w-full">
-          <img src="/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
-          <div className="absolute flex justify-center top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
-            <a href="#slide1" className="btn btn-circle">❮</a>
-            <a href="#slide3" className="btn btn-circle">❯</a>
-          </div>
+        <div className='flex top-8 justify-center py-2'>
+          {
+            slides.map((slide, slideIndex) => {
+              <div key={slideIndex} onClick={() => goToSlide(slideIndex)} className='text-2xl cursor-pointer bg-black'>
+                <FaDotCircle size={50} />
+              </div>
+            })}
         </div>
 
-        {/* Slide 3 */}
-        <div id="slide3" className="carousel-item relative w-full">
-          <img src="/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
-          <div className="absolute flex justify-center top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
-            <a href="#slide2" className="btn btn-circle">❮</a>
-            <a href="#slide4" className="btn btn-circle">❯</a>
-          </div>
-        </div>
-
-        {/* Slide 4 */}
-        <div id="slide4" className="carousel-item relative w-full">
-          <img src="/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="w-full" />
-          <div className="absolute flex justify-center top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
-            <a href="#slide3" className="btn btn-circle">❮</a>
-            <a href="#slide1" className="btn btn-circle">❯</a>
-          </div>
-        </div>
       </div>
 
+      {/* <div className='-mt-40 relative'>
+        {
+          events.map((data) => {
+            return <EventCard key={data._id} data={data} />
+          })
+        }
+        <div className='flex items-center justify-center -mt-7 mb-10'>
+          <div className="btn-group ">
+            <button className="btn btn-success" onClick={() => { page === 1 ? setPage(1) : setPage(page - 1); }} disable={page === 1}>«</button>
+            <button className="btn ">{page}</button>
+            <button className="btn btn-success" onClick={() => { page === Math.round(1000 / limit) ? setPage(Math.round(1000 / limit)) : setPage(page + 1); }} disable={Math.round(1000 / limit)}>»</button>
+          </div>
+        </div>
+      </div> */}
     </>
-  );
-};
 
-export default Banner;
+
+
+
+  )
+}
+
+export default Banner

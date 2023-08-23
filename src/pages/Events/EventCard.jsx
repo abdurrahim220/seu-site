@@ -4,11 +4,6 @@ import { Link } from 'react-router-dom';
 const EventCard = ({ data }) => {
     const { eventName, eventImage, eventDescription, endTime, _id } = data;
     // console.log(_id)
-
-   
-
-
-
     return (
         <div className="hero mx-auto flex max-w-screen-lg bg-[#3b60c9] text-white">
             <div className="hero-content flex-col lg:flex-row">

@@ -21,7 +21,7 @@ const Register = () => {
         };
         console.log(addInfo)
 
-        fetch(`http://localhost:5000/addMembers`, {
+        fetch(`https://server2-psi.vercel.app/addMembers`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

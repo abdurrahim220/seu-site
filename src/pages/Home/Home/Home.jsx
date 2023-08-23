@@ -1,11 +1,13 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import EventsCard from '../EventsCard/EventsCard'
-import Banner from '../Banner/Banner'
+
 import Mission from '../Mission/Mission'
 import Responsibility from '../Responsibility/Responsibility'
 import MemberConuntUp from '../MemberConuntUp/MemberConuntUp'
 import News from '../News/News'
+import Banner from '../Banner/Banner'
+import Job from '../Job/Job'
 
 const Home = () => {
   return (
@@ -13,10 +15,14 @@ const Home = () => {
       <Helmet>
         <title>SEU || Home</title>
       </Helmet>
-      <Mission/>
+
+
+      <Banner />
+      <Mission />
       <EventsCard></EventsCard>
-      <Responsibility/>
-      <MemberConuntUp/>
+      <Responsibility />
+      <MemberConuntUp />
+      <Job />
       <News></News>
     </div>
   )
