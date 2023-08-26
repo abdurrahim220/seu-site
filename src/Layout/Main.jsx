@@ -6,8 +6,7 @@ import TopBar from '../pages/Shared/TopBar/TopBar'
 
 const Main = () => {
   return (
-    <div>   
-      <TopBar />    
+    <div>  
       <NavBar />
       <Outlet />
       <Footer />

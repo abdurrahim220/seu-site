@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 const NewsCard = ({ data }) => {
-    const { _id, article_title, article_date, article_image, article_author, article_category, article_summary } = data;
+    const { _id, article_title, article_image, article_summary } = data;
     return (
         <div className=" mb-16 w-96 bg-base-100 transition-transform duration-300 transform-gpu hover:-translate-y-1">
             <figure><img src={article_image} alt="img" /></figure>

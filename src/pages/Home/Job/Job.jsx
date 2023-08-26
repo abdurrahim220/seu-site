@@ -18,7 +18,7 @@ const Job = () => {
                 <h1 className='text-[3.2rem] font-bold'>Recent Jobs</h1>
             </div>
 
-            <div className='grid justify-center grid-cols-1 px-32 md:grid-cols-3 gap-2 container mx-auto'>
+            <div className='grid justify-center grid-cols-1 lg:px-32 md:grid-cols-3 gap-2 container mx-auto'>
                 {
                     jobs.slice(0,6).map((data) => {
                         return <JobsCard key={data._id} data={data} />

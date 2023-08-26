@@ -9,18 +9,44 @@ import EventCard from '../../Events/EventCard';
 
 const Banner = () => {
 
-  // const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState([]);
 
-  // const [page, setPage] = useState(1)
-  // const [limit, setLimit] = useState(1)
+  const [page, setPage] = useState(1);
+  
+  useEffect(() => {
+    const limit = 1;
+    fetch(`http://localhost:5000/events?limit=${limit}&page=${page}`)
+      .then(res => res.json())
+      .then(data => {
+        setEvents(data)
+        console.log(data)
+      })
 
-  // useEffect(() => {
-  //   fetch(`https://server2-psi.vercel.app/events?limit=${limit}&page=${page}`)
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       setEvents(data)
-  //     })
-  // }, []);
+  }, []);
+
+  const handleClickNext = () => {
+    const limit = 1;
+
+    setPage(page + 1);
+
+    fetch(`http://localhost:5000/events?limit=${limit}&page=${page}`)
+      .then(res => res.json())
+      .then(data => {
+        setEvents(data)
+        console.log(data)
+      })
+
+  }
+
+  const handleClickPrevious = () => {
+    setPage(page - 1);
+    fetch(`http://localhost:5000/events?limit=${limit}&page=${page}`)
+      .then(res => res.json())
+      .then(data => {
+        setEvents(data)
+        console.log(data)
+      })
+  }
 
   const slides = [
     { url: "https://i.ibb.co/frXH6DX/366357667-251573614429709-6683106828939593557-n.jpg" },
@@ -64,7 +90,7 @@ const Banner = () => {
 
       </div>
 
-      {/* <div className='-mt-40 relative'>
+      <div className='-mt-40 relative'>
         {
           events.map((data) => {
             return <EventCard key={data._id} data={data} />
@@ -72,12 +98,16 @@ const Banner = () => {
         }
         <div className='flex items-center justify-center -mt-7 mb-10'>
           <div className="btn-group ">
-            <button className="btn btn-success" onClick={() => { page === 1 ? setPage(1) : setPage(page - 1); }} disable={page === 1}>«</button>
+            <button className="btn btn-success" onClick={handleClickPrevious}
+              disabled={page === 1}>«</button>
+
             <button className="btn ">{page}</button>
-            <button className="btn btn-success" onClick={() => { page === Math.round(1000 / limit) ? setPage(Math.round(1000 / limit)) : setPage(page + 1); }} disable={Math.round(1000 / limit)}>»</button>
+            <button className="btn btn-success" onClick={handleClickNext}
+              disabled={page === `${events.length}`} >»</button>
           </div>
         </div>
-      </div> */}
+        <h1>{events.length}</h1>
+      </div>
     </>
 
 

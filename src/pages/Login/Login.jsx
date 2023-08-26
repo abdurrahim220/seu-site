@@ -1,19 +1,11 @@
-import React, { useContext } from 'react'
-import { FcGoogle } from 'react-icons/fc';
-import { AuthContext } from '../../Provider/AuthProvider';
+import SocialLogin from "./SocialLogin"
+
+
+
 
 const Login = () => {
 
-    const { signInWithG } = useContext(AuthContext)
-    const handleGoogleLogin = () => {
-        signInWithG()
-            .then(result => {
-                const login = result.user;
-                console.log(login);
-            })
-            .catch(error => console.log(error.message))
-
-    }
+    
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -41,13 +33,9 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
                         </div>
-                        <div className='grid mt-3 justify-items-center'>
-                            <h1 className='text-2xl font-bold my-2'>Social Login</h1>
-                            <div className='flex  justify-center'>
-                                <button onClick={handleGoogleLogin}><FcGoogle size={50} /></button>
-                            </div>
-                        </div>
+                       
                     </form>
+                    <SocialLogin/>
                 </div>
             </div>
         </div>

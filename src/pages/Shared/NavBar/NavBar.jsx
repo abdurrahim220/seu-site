@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {FaRegUserCircle} from 'react-icons/fa'
 
 const NavBar = () => {
   const navOption = (
@@ -17,6 +18,9 @@ const NavBar = () => {
         <Link to="/contest">Contest</Link>
       </li>
       <li>
+        <Link to="/android">Android</Link>
+      </li>
+      <li>
         <Link to="/gallery">Gallery</Link>
       </li>
       <li tabIndex={0}>
@@ -32,13 +36,16 @@ const NavBar = () => {
       <li>
         <Link to="/contact">Contact</Link>
       </li>
+      <li>
+        <Link to='dashboard/userCart'><FaRegUserCircle size={20}/></Link>
+      </li>
 
     </>
   );
 
   return (
-    <div className="bg-[#FFFFFF]">
-      <div className="navbar max-w-screen-xl mx-auto  text-[#545454]">
+    <div className="  text-black">
+      <div className="navbar bg-white mx-auto font-bold fixed z-10 ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
