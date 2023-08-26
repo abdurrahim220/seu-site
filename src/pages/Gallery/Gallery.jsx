@@ -10,7 +10,7 @@ const Gallery = () => {
   const [gallerys, setGallerys] = useState([]);
 
   useEffect(() => {
-    fetch("https://server2-psi.vercel.app/gallery")
+    fetch("https://server2-abdurrahim220.vercel.app/gallery")
       .then((res) => res.json())
       .then((data) => {
         setGallerys(data);

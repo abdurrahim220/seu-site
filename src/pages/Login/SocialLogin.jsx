@@ -16,7 +16,7 @@ const SocialLogin = () => {
                 
                 const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email }
 
-                fetch(`http://localhost:5000/users`, {
+                fetch(`https://server2-abdurrahim220.vercel.app/users`, {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',

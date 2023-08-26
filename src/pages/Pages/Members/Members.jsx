@@ -12,7 +12,7 @@ const Members = () => {
     // console.log(searchText);
 
     useEffect(() => {
-        fetch(`https://server2-psi.vercel.app/members?limit=${limit}&page=${page}`)
+        fetch(`https://server2-abdurrahim220.vercel.app/members?limit=${limit}&page=${page}`)
             .then(res => res.json())
             .then(data => {
                 setMembers(data)
@@ -21,7 +21,7 @@ const Members = () => {
 
     const handleSearchText = () => {
         useEffect((
-            fetch(`https://server2-psi.vercel.app/members/${searchText}`)
+            fetch(`https://server2-abdurrahim220.vercel.appmembers/${searchText}`)
                 .then(res => res.json())
                 .then(data => {
                     setMembers(data);

@@ -16,6 +16,7 @@ const AndroidDetails = () => {
     const location = useLocation();
     const [,refetch]=useAndroid();
     const navigate = useNavigate();
+    
     const { courseName, courseCode, instructor, startDate, endDate, schedule, totalClasses, totalDurationWeeks, description, prerequisites, topicsCovered, learningObjectives, resources, price,_id} = data;
 
     const { textbooks, onlineResources } = resources;
@@ -27,7 +28,7 @@ const AndroidDetails = () => {
 
         if (user && user.email) {
             const dataItem = { dataItem: _id, courseName, courseCode, price, email: user.email }
-            fetch('http://localhost:5000/carts', {
+            fetch('https://server2-abdurrahim220.vercel.app/carts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -37,7 +38,7 @@ const AndroidDetails = () => {
             }).then(res => res.json()).then(data => {
                  // refetch cart to update the number of cart
                
-                if (data.insertedId) {
+            if (data.insertedId) {
                     refetch()
                     Swal.fire({
                         position: 'top-end',

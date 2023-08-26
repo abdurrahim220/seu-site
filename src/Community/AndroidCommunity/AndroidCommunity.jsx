@@ -6,7 +6,7 @@ const AndroidCommunity = () => {
 
   const [androids, setAndroids] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/android').
+    fetch('https://server2-abdurrahim220.vercel.app/android').
     then(res => res.json())
     .then(data => {
       setAndroids(data)

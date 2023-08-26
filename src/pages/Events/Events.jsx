@@ -10,7 +10,7 @@ const Events = () => {
 
 
   useEffect(() => {
-    fetch("https://server2-psi.vercel.app/events")
+    fetch("https://server2-abdurrahim220.vercel.app/events")
       .then(res => res.json())
       .then(data => {
         setEvents(data)

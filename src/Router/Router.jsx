@@ -37,17 +37,17 @@ const router = createBrowserRouter([
       { path: "/members", element: <Members /> }, {
         path: '/eventsDetails/:id',
         element: <EventsDetails />,
-        loader: ({ params }) => fetch(`http://localhost:5000/events/${params.id}`)
+        loader: ({ params }) => fetch(`https://server2-abdurrahim220.vercel.app/events/${params.id}`)
       },
       {
         path:'/newsDetails/:id',
         element:<NewsDetails/>,
-        loader:({params}) => fetch(`http://localhost:5000/news/${params.id}`)
+        loader:({params}) => fetch(`https://server2-abdurrahim220.vercel.app/news/${params.id}`)
       },
       {
         path:'/jobsDetails/:id',
         element:<JobsDetails/>,
-        loader:({params}) => fetch(`http://localhost:5000/jobs/${params.id}`)
+        loader:({params}) => fetch(`https://server2-abdurrahim220.vercel.app/jobs/${params.id}`)
       },
      
       {
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
       {
         path:'/androidDetails/:id',
         element:<AndroidDetails/>,
-        loader:({params})=>fetch(`http://localhost:5000/android/${params.id}`)
+        loader:({params})=>fetch(`https://server2-abdurrahim220.vercel.app/android/${params.id}`)
       }
     ],
 

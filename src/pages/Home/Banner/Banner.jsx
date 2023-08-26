@@ -15,7 +15,7 @@ const Banner = () => {
   
   useEffect(() => {
     const limit = 1;
-    fetch(`http://localhost:5000/events?limit=${limit}&page=${page}`)
+    fetch(`https://server2-abdurrahim220.vercel.app/events?limit=${limit}&page=${page}`)
       .then(res => res.json())
       .then(data => {
         setEvents(data)
@@ -29,7 +29,7 @@ const Banner = () => {
 
     setPage(page + 1);
 
-    fetch(`http://localhost:5000/events?limit=${limit}&page=${page}`)
+    fetch(`https://server2-abdurrahim220.vercel.app/events?limit=${limit}&page=${page}`)
       .then(res => res.json())
       .then(data => {
         setEvents(data)
@@ -40,7 +40,7 @@ const Banner = () => {
 
   const handleClickPrevious = () => {
     setPage(page - 1);
-    fetch(`http://localhost:5000/events?limit=${limit}&page=${page}`)
+    fetch(`https://server2-abdurrahim220.vercel.app/events?limit=${limit}&page=${page}`)
       .then(res => res.json())
       .then(data => {
         setEvents(data)

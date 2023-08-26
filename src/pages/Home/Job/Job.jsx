@@ -5,7 +5,7 @@ const Job = () => {
     const [jobs, setJobs] = useState([]);
 
     useState(() => {
-        fetch('http://localhost:5000/jobs')
+        fetch('https://server2-abdurrahim220.vercel.app/jobs')
             .then(res => res.json())
             .then(data => {
                 setJobs(data)

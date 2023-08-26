@@ -21,7 +21,7 @@ const Register = () => {
         };
         console.log(addInfo)
 
-        fetch(`https://server2-psi.vercel.app/addMembers`, {
+        fetch(`https://server2-abdurrahim220.vercel.appaddMembers`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
