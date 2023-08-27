@@ -6,6 +6,7 @@ import EventCard from './EventCard';
 const Events = () => {
 
   const [events, setEvents] = useState([]);
+  const eventsimg = 'https://i.ibb.co/QXR1bkc/lee-blanchflower-1d-W1v-EJLl-CQ-unsplash.jpg'
 
 
 
@@ -25,7 +26,7 @@ const Events = () => {
         <title>SEU || Events</title>
       </Helmet>
 
-      <PageBanner />
+      <PageBanner img={eventsimg} title={"Seu Events"} description={"All Types of events are here"}/>
 
 
       <div className='my-10'>

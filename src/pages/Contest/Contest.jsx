@@ -2,9 +2,10 @@ import React from 'react'
 import PageBanner from '../Shared/PageBanner/PageBanner'
 
 const Contest = () => {
+    const img = 'https://i.ibb.co/h8rNnZV/markus-spiske-hv-Sr-CVec-VI-unsplash.jpg'
     return (
         <div>
-            <PageBanner />
+            <PageBanner img={img} title={"Programming Contest Arena"} description={"We love Programming"} />
             <div>
                 <div className="bg-gray-100 min-h-screen flex items-center justify-center">
                     <div className="bg-white p-8 rounded-lg shadow-md w-96">

@@ -4,10 +4,14 @@ import { Link } from "react-router-dom";
 import GalleryTabsCard from "./GalleryTabsCard";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import PageBanner from "../Shared/PageBanner/PageBanner";
 
 
 const Gallery = () => {
   const [gallerys, setGallerys] = useState([]);
+  const [activeTab, setActiveTab] = useState(0);
+
+  const tabs = ['All Picture', 'CSE'];
 
   useEffect(() => {
     fetch("https://server2-abdurrahim220.vercel.app/gallery")
@@ -16,6 +20,7 @@ const Gallery = () => {
         setGallerys(data);
       });
   }, []);
+  const img = 'https://i.ibb.co/FH9079F/eric-park-Qb-X8-A8e-Hfzw-unsplash.jpg'
 
   return (
 
@@ -23,15 +28,18 @@ const Gallery = () => {
       <Helmet>
         <title>SEU || Gallery</title>
       </Helmet>
-      <h1>{gallerys.length}</h1>
+
+      <PageBanner img={img} title={"Capture The memory"} description={"All the southeast memories are here at one place"} />
 
 
       <div>
         <Tabs>
-          <TabList>
-            <Tab>All Picture</Tab>
-            <Tab>CSE</Tab>
-          </TabList>
+          <div className="flex gap-2 justify-center my-5">
+            <TabList className="flex gap-2">
+              <Tab className='btn btn-outline btn-sm btn-primary'>All Picture</Tab>
+              <Tab className='btn btn-outline btn-sm btn-warning'>CSE</Tab>
+            </TabList>
+          </div>
 
           <TabPanel>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

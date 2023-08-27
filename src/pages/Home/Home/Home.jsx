@@ -18,8 +18,8 @@ const Home = () => {
 
 
       <Banner />
-      <Mission />
-      <EventsCard></EventsCard>
+     
+      
       <Responsibility />
       <MemberConuntUp />
       <Job />
