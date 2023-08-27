@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import PageBanner from '../../pages/Shared/PageBanner/PageBanner'
 import AndroidCard from './AndroidCard';
 
+import coverImg from '../../assets/Roboto/guido-coppa-n-KQ4-VY6Yg-unsplash.jpg'
+
 const AndroidCommunity = () => {
 
   const [androids, setAndroids] = useState([]);
@@ -16,7 +18,7 @@ const AndroidCommunity = () => {
 
   return (
     <div className='bg-[#f0f5fb]'>
-      <PageBanner />
+      <PageBanner img={coverImg} title="Android Development" description="Southeast University Arrange This program for us" />
       <div >
         <div className='grid justify-items-center'>
           <h1 className=' mt-32 font-bold text-[2.6rem]'>Choose a topic</h1>

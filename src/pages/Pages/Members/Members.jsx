@@ -7,6 +7,7 @@ const Members = () => {
     const [members, setMembers] = useState([]);
     const [page, setPage] = useState(1)
     const [limit, setLimit] = useState(20)
+    const memberImg = "https://i.ibb.co/JvvsrYs/headway-F2-KRf-Qf-Cqw-unsplash.jpg"
 
     const [searchText, setSearchText] = useState("")
     // console.log(searchText);
@@ -31,11 +32,11 @@ const Members = () => {
 
     return (
         <div>
-            <PageBanner />
+            <PageBanner img={memberImg} title={"Southeast Members"} description={"All The register members are here you can search by their name or id"}/>
             <div className='bg-[#FFFFFF]'>
 
                 <div className='flex justify-center mt-28'>
-                    <h1 className='text-[#3a3b3c] text-[3.6rem] font-bold'>Now we have <span className='text-[#3b60c9]'> <CountUp start={1} end={members.length} duration={3} /></span> member</h1>
+                    <h1 className='text-[#3a3b3c] lg:text-[3.6rem] text-[1.6rem] font-bold'>Now we have <span className='text-[#3b60c9]'> <CountUp start={1} end={members.length} duration={3} /></span> member</h1>
                 </div>
 
 
@@ -46,7 +47,7 @@ const Members = () => {
                     </label>
                 </div>
 
-                <div className="container mx-auto text-white overflow-x-auto mb-10">
+                <div className="container mx-auto text-white overflow mb-10">
                     <table className="table border-4 border-[#e9ecef]">
                         {/* head */}
                         <thead className='bg-[#3b60c9] text-white'>

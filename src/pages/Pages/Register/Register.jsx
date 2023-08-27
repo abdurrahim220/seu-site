@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import Swal from 'sweetalert2'
 
 const Register = () => {
+    const imgPg = 'https://i.ibb.co/Kycq67C/tiffany-tertipes-nxcs8wwj9-J0-unsplash.jpg'
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -42,7 +43,7 @@ const Register = () => {
             <Helmet>
                 <title>SEU || Register</title>
             </Helmet>
-            <PageBanner></PageBanner>
+            <PageBanner img={imgPg} title={"Register For Any Club At Southeast University"} description={"Club are necessary for building up your outer knowledge"}></PageBanner>
 
 
             <div className='mt-28 mb-20'>
