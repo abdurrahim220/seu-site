@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaRegUserCircle } from 'react-icons/fa'
 import AuthProvider, { AuthContext } from "../../../Provider/AuthProvider";
 
@@ -7,23 +7,23 @@ const NavBar = () => {
   const { user } = useContext(AuthContext);
   const navOption = (
     <>
-      <li>
-        <Link to="/">Home</Link>
+      <li className="relative">
+        <Link  className="hover:text-blue-500 hover:underline" to="/">Home</Link>
       </li>
-      <li>
-        <Link to="/about">About</Link>
+      <li className="relative">
+        <Link  className="hover:text-blue-500 hover:underline" to="/about">About</Link>
       </li>
-      <li>
-        <Link to="/events">Events</Link>
+      <li className="relative">
+        <Link  className="hover:text-blue-500 hover:underline" to="/events">Events</Link>
       </li>
-      <li>
-        <Link to="/contest">Contest</Link>
+      <li className="relative">
+        <Link  className="hover:text-blue-500 hover:underline" to="/contest">Contest</Link>
       </li>
-      <li>
-        <Link to="/android">Android</Link>
+      <li className="relative">
+        <Link  className="hover:text-blue-500 hover:underline" to="/android">Android</Link>
       </li>
-      <li>
-        <Link to="/gallery">Gallery</Link>
+      <li className="relative">
+        <Link  className="hover:text-blue-500 hover:underline" to="/gallery">Gallery</Link>
       </li>
       <li tabIndex={0}>
         <details>

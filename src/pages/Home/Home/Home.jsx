@@ -15,11 +15,9 @@ const Home = () => {
       <Helmet>
         <title>SEU || Home</title>
       </Helmet>
-
-
       <Banner />
-     
-      
+    
+      <Mission></Mission>
       <Responsibility />
       <MemberConuntUp />
       <Job />

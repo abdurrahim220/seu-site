@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import PageBanner from '../Shared/PageBanner/PageBanner'
 import EventCard from './EventCard';
+import PageTransition from '../../hooks/PageTransition';
 
 const Events = () => {
 
@@ -11,7 +12,7 @@ const Events = () => {
 
 
   useEffect(() => {
-    fetch("https://server2-abdurrahim220.vercel.app/events")
+    fetch("http://localhost:5000/events")
       .then(res => res.json())
       .then(data => {
         setEvents(data)
@@ -21,6 +22,7 @@ const Events = () => {
 
 
   return (
+    <PageTransition>
     <div>
       <Helmet>
         <title>SEU || Events</title>
@@ -46,6 +48,7 @@ const Events = () => {
       </div>
 
     </div>
+    </PageTransition>
   )
 }
 

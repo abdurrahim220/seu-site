@@ -28,7 +28,7 @@ const AndroidDetails = () => {
 
         if (user && user.email) {
             const dataItem = { dataItem: _id, courseName, courseCode, price, email: user.email }
-            fetch('https://server2-abdurrahim220.vercel.app/carts', {
+            fetch('http://localhost:5000/carts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

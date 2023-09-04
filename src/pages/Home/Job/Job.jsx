@@ -2,15 +2,16 @@ import React, { useState } from 'react'
 import JobsCard from './JobsCard';
 
 const Job = () => {
+    
     const [jobs, setJobs] = useState([]);
 
     useState(() => {
-        fetch('https://server2-abdurrahim220.vercel.app/jobs')
+        fetch('http://localhost:5000/jobs')
             .then(res => res.json())
             .then(data => {
                 setJobs(data)
             })
-    }, [])
+    }, []);
 
     return (
         <div className='bg-[#fff] mb-20'>

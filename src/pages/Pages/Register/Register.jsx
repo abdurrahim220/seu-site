@@ -22,7 +22,7 @@ const Register = () => {
         };
         console.log(addInfo)
 
-        fetch(`https://server2-abdurrahim220.vercel.appaddMembers`, {
+        fetch(`http://localhost:5000addMembers`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -5,7 +5,7 @@ const useCommittee = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch('https://server2-abdurrahim220.vercel.app/authority')
+        fetch('http://localhost:5000/authority')
             .then(res => res.json())
             .then(data => {
                 setCommittee(data);

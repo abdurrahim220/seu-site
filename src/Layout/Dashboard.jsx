@@ -35,7 +35,7 @@ const Dashboard = () => {
                 </div>
                 <div className="drawer-side ">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 h-full  text-base-content">
+                    <ul className="menu p-4 w-80 h-[100vh] bg-gray-400  text-base-content">
 
                         <li><NavLink to='userCart'><ImCart />Cart <div class="badge badge-secondary">+{carts?.length}</div></NavLink></li>
                         <li><NavLink to='allUser'><FaUser />All user</NavLink></li>
