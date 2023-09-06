@@ -1,18 +1,19 @@
 import React, { useContext } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
-import { FaUser } from 'react-icons/fa'
+import { FaTachometerAlt, FaUser } from 'react-icons/fa'
 import { TbLogout2 } from 'react-icons/tb'
 import { ImCart } from 'react-icons/im'
 import { FiLogIn } from 'react-icons/fi'
-import { FcAndroidOs, FcHome } from 'react-icons/fc'
+import { FcAndroidOs, FcHome,FcSurvey,FcNews } from 'react-icons/fc'
 import useAndroid from '../hooks/useAndroid'
 import { AuthContext } from '../Provider/AuthProvider'
 
 const Dashboard = () => {
-    const { LogOut } = useContext(AuthContext)
+    const { LogOut, user } = useContext(AuthContext)
+    console.log(user)
 
     const [carts, refetch] = useAndroid();
-    console.log(carts)
+    // console.log(carts)
     const handleLogout = () => {
         LogOut()
             .then(result => {
@@ -25,30 +26,56 @@ const Dashboard = () => {
 
     return (
 
-       
-            <div className="drawer mx-auto lg:drawer-open">
-                <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col items-center justify-center">
-                    <Outlet></Outlet>
-                    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
-                </div>
-                <div className="drawer-side ">
-                    <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 h-[100vh] bg-gray-400  text-base-content">
+        <div className="drawer mx-auto lg:drawer-open">
+            <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content bg-[#F9FAFB] flex flex-col items-center justify-center">
+                <Outlet></Outlet>
+                <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
+            </div>
+            <div className="drawer-side ">
+                <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
+                <ul className="menu p-4 w-80 h-[100vh] bg-gray-400  text-base-content">
+                    <div className='grid items-center justify-center py-[30px] border-b-2 border-[#ededed]/[0.3]'>
+                        <h1 className='text-white lg:text-[18px] leading-[24px] font-extrabold cursor-pointer'>Admin Panel</h1>
+
+                    </div>
+                    {
+                        user && <div className='flex items-center gap-1 justify-center py-[10px] border-b-2 border-[#ededed]/[0.3]'>
+
+
+                            <img className='w-5 rounded-full' src={user.photoURL} alt="" srcset="" />
+
+
+                            <h1 className='text-white uppercase lg:text-[18px] leading-[24px] font-extrabold cursor-pointer'>{user.displayName}</h1>
+
+
+                        </div>
+                    }
+                    <div className='flex text-white items-center gap-4 justify-center py-[20px] border-b-2 border-[#ededed]/[0.3]'>
+                        <FaTachometerAlt />
+                        <p className='text-[14px] font-bold leading-5'>Dashboard</p>
+                    </div>
+
+                    <div className='grid text-white items-center gap-4 justify-center py-[20px] border-b-2 border-[#ededed]/[0.3]'>
                         <li><NavLink to='userCart'><ImCart />Cart <div class="badge badge-secondary">+{carts?.length}</div></NavLink></li>
                         <li><NavLink to='allUser'><FaUser />All user</NavLink></li>
-                        <div className='divider'></div>
-                        <li><NavLink to='/'><FcHome />Home</NavLink></li>
-                        <li><NavLink to='/android'><FcAndroidOs size={20} />AndroidCommunity</NavLink></li>
-                        <li><NavLink to='login'><FiLogIn />Log In</NavLink></li>
-                        <li><NavLink onClick={handleLogout} ><TbLogout2 />Log Out</NavLink></li>
+                        <li><NavLink to='postJobs'><FaUser />Post Jobs</NavLink></li>
+                        <li><NavLink to='postEvents'><FcSurvey />Post Events</NavLink></li>
+                        <li><NavLink to='postCourse'><FaUser />Post Course</NavLink></li>
+                        <li><NavLink to='postNews'><FcNews />Post News</NavLink></li>
+                    </div>
 
-                    </ul>
+                    <li><NavLink to='/'><FcHome />Home</NavLink></li>
+                    <li><NavLink to='/android'><FcAndroidOs size={20} />AndroidCommunity</NavLink></li>
+                    <li><NavLink to='login'><FiLogIn />Log In</NavLink></li>
+                    <li><NavLink onClick={handleLogout} ><TbLogout2 />Log Out</NavLink></li>
 
-                </div>
-            
+                </ul>
+
+            </div>
+
         </div>
 
     )

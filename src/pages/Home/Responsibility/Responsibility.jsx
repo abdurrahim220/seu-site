@@ -5,7 +5,7 @@ const Responsibility = () => {
         <div className='bg-[#ECF1F5] font-serif'>
 
             <div className='flex justify-center'>
-                <h1 className='mt-24 mb-8 loading-[100%] text-black text-[3rem] font-bold'> Our Responsibility</h1>
+                <h1 className='mt-24 mb-8 loading-[100%] text-black lg:text-[3rem] text-[1.8rem] font-bold'> Our Responsibility</h1>
             </div>
 
 

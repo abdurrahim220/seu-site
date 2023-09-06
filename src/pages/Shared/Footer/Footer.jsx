@@ -22,7 +22,7 @@ const Footer = () => {
               <p className="text-xs">University Alumni Html Template</p>
             </div>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde fugiat  <br/> aliquam molestiae id possimus asperiores quae autem maiores blanditiis.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde fugiat  <br /> aliquam molestiae id possimus asperiores quae autem maiores blanditiis.</p>
           <div className="mt-5 flex gap-10">
             <h2 className="font-bold">Phone: +87454796221</h2>
             <h2 className="font-bold">Fax: +88457842121</h2>
@@ -63,7 +63,11 @@ const Footer = () => {
           </div>
 
         </div>
+
       </footer>
+      <aside>
+        <p>RB_1.1.1</p>
+      </aside>
     </div>
 
 

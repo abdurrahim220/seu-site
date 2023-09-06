@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const JobsCard = ({ data }) => {
     const { jobTitle, image, jobDescription, _id } = data;
     return (
-        <div className="card w-96 border">
+        <div className="card w-96 border px-2">
             <figure className="px-6 pt-6">
                 <img src={image} alt="jobs" className="mask mask-circle w-16 h-16" />
             </figure>

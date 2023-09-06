@@ -22,7 +22,7 @@ const Members = () => {
 
     const handleSearchText = () => {
         useEffect((
-            fetch(`http://localhost:5000members/${searchText}`)
+            fetch(`http://localhost:5000/members/${searchText}`)
                 .then(res => res.json())
                 .then(data => {
                     setMembers(data);

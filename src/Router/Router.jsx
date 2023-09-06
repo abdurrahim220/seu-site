@@ -19,12 +19,13 @@ import AllUser from "../pages/Dashboard/AllUser/AllUser";
 import UserCart from "../pages/Dashboard/UserCart/UserCart";
 import AndroidCommunity from "../Community/AndroidCommunity/AndroidCommunity";
 import AndroidDetails from "../Community/AndroidCommunity/AndroidDetails";
+import PostJobs from "../pages/Dashboard/PostJobs/PostJobs";
+import PostEvents from "../pages/Dashboard/PostEvents/PostEvents";
+import PostCourse from "../pages/Dashboard/PostCourse/PostCourse";
+import PostNews from "../pages/Dashboard/PostNews/PostNews";
 
 const router = createBrowserRouter([
-  {
-    path:'login',
-    element:<Login/>
-  },
+
   {
     path: "/",
     element: <Main />,
@@ -44,46 +45,66 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`http://localhost:5000/events/${params.id}`)
       },
       {
-        path:'/newsDetails/:id',
-        element:<NewsDetails/>,
-        loader:({params}) => fetch(`http://localhost:5000/news/${params.id}`)
+        path: '/newsDetails/:id',
+        element: <NewsDetails />,
+        loader: ({ params }) => fetch(`http://localhost:5000/news/${params.id}`)
       },
       {
-        path:'/jobsDetails/:id',
-        element:<JobsDetails/>,
-        loader:({params}) => fetch(`http://localhost:5000/jobs/${params.id}`)
+        path: '/jobsDetails/:id',
+        element: <JobsDetails />,
+        loader: ({ params }) => fetch(`http://localhost:5000/jobs/${params.id}`)
       },
-     
+
       {
-        path:'/reg',
-        element:<Reg/>
+        path: '/reg',
+        element: <Reg />
       }
       ,
-     
+
       {
-        path:'/androidDetails/:id',
-        element:<AndroidDetails/>,
-        loader:({params})=>fetch(`http://localhost:5000/android/${params.id}`)
+        path: '/androidDetails/:id',
+        element: <AndroidDetails />,
+        loader: ({ params }) => fetch(`http://localhost:5000/android/${params.id}`)
       }
     ],
 
   },
   {
-    path:'dashboard',
-    element:<Dashboard/>,
-    children:[
+    path: 'dashboard',
+    element: <Dashboard />,
+    children: [
       {
-        path:'userCart',
-        element:<UserCart/>
+        path: 'userCart',
+        element: <UserCart />
       },
       {
-        path:'allUser',
-        element:<AllUser/>
+        path: 'allUser',
+        element: <AllUser />
       },
-     
-     
+      {
+        path: 'postJobs',
+        element: <PostJobs />
+      },
+      {
+        path: 'postCourse',
+        element: <PostCourse />
+
+      },
+      {
+        path: 'postEvents',
+        element: <PostEvents />
+      },
+      {
+        path: 'postNews',
+        element: <PostNews />
+      },
+
+      {
+        path: 'login',
+        element: <Login />
+      },
     ]
-    
+
   }
 
 ]);

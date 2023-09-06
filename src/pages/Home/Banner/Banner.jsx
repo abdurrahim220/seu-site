@@ -8,46 +8,7 @@ import EventCard from '../../Events/EventCard';
 
 
 const Banner = () => {
-
-  const [events, setEvents] = useState([]);
-
-  const [page, setPage] = useState(1);
   
-  useEffect(() => {
-    const limit = 1;
-    fetch(`http://localhost:5000/events?limit=${limit}&page=${page}`)
-      .then(res => res.json())
-      .then(data => {
-        setEvents(data)
-        console.log(data)
-      })
-
-  }, []);
-
-  const handleClickNext = () => {
-    const limit = 1;
-
-    setPage(page + 1);
-
-    fetch(`http://localhost:5000/events?limit=${limit}&page=${page}`)
-      .then(res => res.json())
-      .then(data => {
-        setEvents(data)
-        console.log(data)
-      })
-
-  }
-
-  const handleClickPrevious = () => {
-    setPage(page - 1);
-    fetch(`http://localhost:5000/events?limit=${limit}&page=${page}`)
-      .then(res => res.json())
-      .then(data => {
-        setEvents(data)
-        console.log(data)
-      })
-  }
-
   const slides = [
     { url: "https://i.ibb.co/frXH6DX/366357667-251573614429709-6683106828939593557-n.jpg" },
     { url: "https://i.ibb.co/d70x1Bd/366800092-251573847763019-5536209276254022446-n.jpg" },
@@ -90,24 +51,7 @@ const Banner = () => {
 
       </div>
 
-      <div className='-mt-40 relative'>
-        {
-          events.map((data) => {
-            return <EventCard key={data._id} data={data} />
-          })
-        }
-        <div className='flex items-center justify-center -mt-7 mb-10'>
-          <div className="btn-group ">
-            <button className="btn btn-success" onClick={handleClickPrevious}
-              disabled={page === 1}>«</button>
-
-            <button className="btn ">{page}</button>
-            <button className="btn btn-success" onClick={handleClickNext}
-              disabled={page === `${events.length}`} >»</button>
-          </div>
-        </div>
-        <h1>{events.length}</h1>
-      </div>
+    
     </>
 
 

@@ -22,7 +22,7 @@ const Register = () => {
         };
         console.log(addInfo)
 
-        fetch(`http://localhost:5000addMembers`, {
+        fetch(`http://localhost:5000/addMembers`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
