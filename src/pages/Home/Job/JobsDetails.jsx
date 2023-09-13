@@ -7,6 +7,7 @@ import { FaMapLocationDot, FaFileContract } from 'react-icons/fa6'
 import { BiSolidTimer } from 'react-icons/bi'
 import { BsPersonWorkspace, BsFillCalendarCheckFill } from 'react-icons/bs'
 import { MdLocalOffer } from 'react-icons/md'
+import { Helmet } from 'react-helmet-async';
 
 
 const JobsDetails = () => {
@@ -16,6 +17,9 @@ const JobsDetails = () => {
     const img = 'https://i.ibb.co/rZhCmKn/forHire.jpg'
     return (
         <div >
+            <Helmet>
+                <title>Job-Details</title>
+            </Helmet>
             <PageBanner img={img} title={"Job Details"} description={"Follow the footstep"} />
             <div className='container max-w-screen-md mt-20 border bg-white mb-10 mx-auto font-roboto'>
                 <h1 className='text-[#2b882f] font-bold text-[18px] px-5 mt-14 pb-2'>{jobTitle}</h1>
