@@ -1,7 +1,7 @@
 import React from 'react'
 import { Parallax} from 'react-parallax';
 
-const PageBanner = ({ img, title,description }) => {
+const PageBanner = ({ img, title, description }) => {
     return (
         <Parallax
             blur={{ min: -50, max: 50 }}

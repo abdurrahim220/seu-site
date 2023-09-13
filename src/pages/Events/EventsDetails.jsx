@@ -5,7 +5,7 @@ import PageBanner from '../Shared/PageBanner/PageBanner';
 
 const EventsDetails = () => {
   const details = useLoaderData();
-  console.log(details);
+  // console.log(details);
   const { eventName, eventImage, eventDescription, speakers } = details;
 
 

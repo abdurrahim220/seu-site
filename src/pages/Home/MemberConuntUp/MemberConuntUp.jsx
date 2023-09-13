@@ -12,8 +12,8 @@ const MemberConuntUp = () => {
     return (
         <div className='bg-[#161f37]'>
 
-            <div className='grid container mx-auto grid-cols-1 md:grid-cols-2 justify-items-center items-center py-16 lg:grid-cols-4'>
-                <div className='flex gap-5  items-center'>
+            <div className='grid container font-prompt mx-auto grid-cols-1 md:grid-cols-2 justify-items-center items-center py-16 lg:grid-cols-4'>
+                <div className='flex gap-5 justify-center items-center'>
                     <div className='text-white '><BiGroup  size={100}/></div>
                     <div className='text-white text-[2rem]'>
                         <CountUp start={1} end={1500} duration={3} />
@@ -21,7 +21,7 @@ const MemberConuntUp = () => {
                     </div>
                 </div>
 
-                <div className='flex gap-5  items-center'>
+                <div className='flex gap-5 justify-center items-center'>
                     <div className='text-white'><TbPhotoCheck size={100}/></div>
                     <div className='text-white text-[2rem]'>
                         <CountUp start={1} end={1500} duration={3} />
@@ -30,7 +30,7 @@ const MemberConuntUp = () => {
                 </div>
 
 
-                <div className='flex gap-5  items-center'>
+                <div className='flex gap-5 justify-center items-center'>
                     <div className='text-white'><MdEventRepeat size={100}/></div>
                     <div className='text-white text-[2rem]'>
                         <CountUp start={1} end={480} duration={3} />
@@ -39,7 +39,7 @@ const MemberConuntUp = () => {
                 </div>
 
 
-                <div className='flex gap-5  items-center'>
+                <div className='flex gap-5 justify-center items-center'>
                     <div className='text-white'><FiAward size={100}/></div>
                     <div className='text-white text-[2rem]'>
                         <CountUp start={1} end={1500} duration={3} />

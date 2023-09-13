@@ -9,7 +9,7 @@ const NewsDetails = () => {
     return (
         <div>
             <PageBanner />
-            <div className='bg-[#ecf1f5]'>
+            <div className='bg-[#ecf1f5] font-roboto'>
                 <div className=' mx-auto flex justify-center'>
 
                     <div>

@@ -22,8 +22,8 @@ const Gallery = () => {
       });
   }, []);
   const img = 'https://i.ibb.co/FH9079F/eric-park-Qb-X8-A8e-Hfzw-unsplash.jpg';
+  
   const backgroundColor = 'rgba(122, 148, 167, 0.3)';
-
 
 
   return (

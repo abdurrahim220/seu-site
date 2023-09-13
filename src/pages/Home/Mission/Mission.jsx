@@ -33,16 +33,30 @@ const Mission = () => {
   return (
     <>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center"
+        data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="50"
+        data-aos-duration="2000"
+      >
         <h1 className="text-[#131c33] hover:text-stone-300 my-4 text-5xl lg:text-7xl font-bold font-sans">Our Mission</h1>
       </div>
 
       <div className="mx-auto container lg:flex  gap-3 items-center justify-center">
-        <div>
-          <Lottie animationData={don_t_Animation} loop={true} />;
+        <div
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+          data-aos-easing="ease-in-sine"
+        >
+          <Lottie animationData={don_t_Animation}/>;
         </div>
 
-        <div className="px-10 max-w-3xl">
+        <div className="px-10 max-w-3xl"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-offset="300"
+          data-aos-duration="1500"
+        >
           {
             accordingData.map((data, index) => {
               return <According key={index} open={index === open} title={data.title} desc={data.desc} toggle={() => toggle(index)} />

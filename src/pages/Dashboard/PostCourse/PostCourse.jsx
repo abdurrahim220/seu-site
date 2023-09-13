@@ -2,6 +2,7 @@ import React from 'react'
 import Select from "react-select"
 
 import { useForm, Controller, useFieldArray } from 'react-hook-form';
+import Swal from 'sweetalert2';
 
 const PostCourse = () => {
     const {
@@ -42,20 +43,27 @@ const PostCourse = () => {
 
         // console.log(data)
 
-         data.price = parseFloat(data.price);
-         console.log(data.price)
+        data.price = parseFloat(data.price);
+
 
         fetch("http://localhost:5000/addAndroid", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(data),
         })
-          .then((res) => res.json())
-          .then((result) => {
-            // console.log(result);
-            console.log(result)
-          });
-        console.log(data);
+            .then((res) => res.json())
+            .then((result) => {
+                // console.log(result);
+                console.log(result)
+                if (result.acknowledged === true) {
+                    Swal.fire(
+                        'Good job!',
+                        'Data Added SuccessFully',
+                        'success'
+                    )
+                }
+            });
+        // console.log(data);
     };
 
     return (

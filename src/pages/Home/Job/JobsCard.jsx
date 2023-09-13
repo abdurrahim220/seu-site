@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 const JobsCard = ({ data }) => {
     const { jobTitle, image, jobDescription, _id } = data;
     return (
-        <div className="card w-96 border px-2">
+        <div data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            className="card w-96 border px-2 hover:transform hover:scale-110 transition-transform duration-300 ease-in-out">
             <figure className="px-6 pt-6">
                 <img src={image} alt="jobs" className="mask mask-circle w-16 h-16" />
             </figure>
