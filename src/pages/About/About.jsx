@@ -3,33 +3,41 @@ import { Helmet } from 'react-helmet-async'
 import PageTransition from '../../hooks/PageTransition'
 import { useScroll, useSpring } from 'framer-motion'
 import { motion } from 'framer-motion';
+import PageBanner from '../Shared/PageBanner/PageBanner';
 const About = () => {
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress)
   return (
     <PageTransition>
+      <Helmet>
+        <title>SEU || About</title>
+      </Helmet>
 
-      <motion.div style={{ scaleX }} >
-        <Helmet>
-          <title>SEU || About</title>
-        </Helmet>
+      <PageBanner img="" title="About Us" description="Alumni Needs enables you to harness the power of your alumni network. Whatever may be the need" />
 
-        <div>
-          <div className='mb-6'><div className="hero min-h-screen" style={{ backgroundImage: 'url(https://scontent.fdac24-4.fna.fbcdn.net/v/t39.30808-6/308468636_507353204729951_4755873565459664359_n.png?stp=dst-png_s960x960&_nc_cat=109&cb=99be929b-59f725be&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeGsZ1AxvrfsSBmW8GOjsDAn74fj8u9z9nzvh-Py73P2fJdW_Mf1rSDb1ASPbBeCRNGfjBMHsEdrsow901ZYa7Zv&_nc_ohc=sqmnBUgpar4AX_YgmSy&_nc_ht=scontent.fdac24-4.fna&oh=00_AfCeswH2637ro748HnzhXWxVLf8Jq0ErDO_BjDDyql3EOw&oe=64CAB588)' }}>
-            <div className="hero-overlay bg-opacity-60"></div>
-            <div className="hero-content text-center text-neutral-content">
-              <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                <p className="mb-5">History (Image and Details) of Club Alumnie</p>
-              </div>
-            </div>
-          </div></div>
+     
 
-          <div>
+        <div className='relative w-[500px] mx-auto'>
+          <div className='lg:-top-20 lg:text-[7.2rem] lg:text-[#fff] absolute right-7'>1920</div>
 
-          </div>
+          <img className='float-left' src="https://codeboxr.net/themedemo/unialumni/html/assets/images/about-page/about-img-1.jpg" alt="" srcset="" />
+          <h1>ESTD of This Alumni Assotitation</h1>
+          <p>Aenean viverra rhoncus sspede. Phasellssus leo dolor, tempus non, auctor endrerit
+            quis, nisi. Fusce neque. Donec vitae orci sed dolor rutrum ausssctor. Sed
+            fringilla mauris sit amet nibh.</p>
+          <p>Etiam rhoncus. Ut lddffdfqwqeo. Morbi mollis tellus ac sapien. Fusce fermentum oo
+            nec arcu. Quisque manisl idUt leo. Morbi mollis tellus ac sapien. Fusce
+            fermentum oo nec ante tempus hendrerit. Curabitur at lacus ac velit ornare
+            lobortis. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
+            turpis. Quisque id mi.Aenean viverra rhoncus pede. Phasellus leo dolor, tempus non, auctor
+            endrerit quis, nisi.
+            Fusce neque. Donec vitae orci sed dolor rutrum auctor. Sed fringilla mauris sit amet
+            nibh.Etiam rhoncus. Ut leo. Morbi mollis tellus ac sapien. Fusce fermentum oo nec arcu.
+            Quisque malesuada placerat nisl. Etiam sit amet orci eget faucitincidunt. Quisque
+            rutrum. Pellentesque posuere. Praesent ac massa at ligula laoureet iaculis. Cras risus
+            ipsum, faucibus ut, ullamcorper id, varius ac, leo.</p>
         </div>
-      </motion.div>
+
 
     </PageTransition>
 

@@ -8,6 +8,8 @@ import MemberConuntUp from '../MemberConuntUp/MemberConuntUp'
 import News from '../News/News'
 import Banner from '../Banner/Banner'
 import Job from '../Job/Job'
+import SliderGallery from '../SliderGallery/SliderGallery'
+
 
 const Home = () => {
   return (
@@ -16,12 +18,14 @@ const Home = () => {
         <title>SEU || Home</title>
       </Helmet>
       <Banner />
-    
+
       <Mission></Mission>
       <Responsibility />
       <MemberConuntUp />
       <Job />
+      <SliderGallery />
       <News></News>
+
     </div>
   )
 }

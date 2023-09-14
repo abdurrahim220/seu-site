@@ -6,21 +6,15 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import PageBanner from "../Shared/PageBanner/PageBanner";
 import PageTransition from "../../hooks/PageTransition";
+import useGallery from "../../hooks/useGallery";
 
 
 const Gallery = () => {
-  const [gallerys, setGallerys] = useState([]);
+  const [galleries] = useGallery()
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = ['All Picture', 'CSE'];
 
-  useEffect(() => {
-    fetch("http://localhost:5000/gallery")
-      .then((res) => res.json())
-      .then((data) => {
-        setGallerys(data);
-      });
-  }, []);
   const img = 'https://i.ibb.co/FH9079F/eric-park-Qb-X8-A8e-Hfzw-unsplash.jpg';
   
   const backgroundColor = 'rgba(122, 148, 167, 0.3)';
@@ -49,7 +43,7 @@ const Gallery = () => {
             <TabPanel>
               <div className="flex justify-center flex-wrap gap-4">
                 {
-                  gallerys.map((gallery) => {
+                  galleries.map((gallery) => {
                     return <div className="gap-4 relative flex flex-col w-1/4">
                       <img className="h-[350px] max-w-full  transition-transform duration-300 transform scale-100 hover:scale-110  rounded-lg" src={gallery.image_url} key={gallery._id} alt="" srcset="" />
                     </div>
@@ -60,7 +54,7 @@ const Gallery = () => {
             <TabPanel>
               <div className="flex justify-center flex-wrap gap-4">
                 {
-                  gallerys.slice(6, 10).map((gallery) => {
+                  galleries.slice(6, 10).map((gallery) => {
                     return <div className="gap-4 relative flex flex-col w-1/4">
                       <img className="h-[350px]  transition-transform duration-300 transform scale-100 hover:scale-110 max-w-full rounded-lg" src={gallery.image_url} key={gallery._id} alt="" srcset="" />
                     </div>
