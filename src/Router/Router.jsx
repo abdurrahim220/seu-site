@@ -23,6 +23,7 @@ import PostJobs from "../pages/Dashboard/PostJobs/PostJobs";
 import PostEvents from "../pages/Dashboard/PostEvents/PostEvents";
 import PostCourse from "../pages/Dashboard/PostCourse/PostCourse";
 import PostNews from "../pages/Dashboard/PostNews/PostNews";
+import GalleryPage from "../pages/Gallery/GalleryPage";
 
 const router = createBrowserRouter([
 
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/events", element: <Events /> },
       { path: "/gallery", element: <Gallery /> },
+      { path: "/galleryPage", element: <GalleryPage /> },
       { path: "/contact", element: <Contact /> },
       { path: "/contest", element: <Contest /> },
       { path: "/android", element: <AndroidCommunity /> },

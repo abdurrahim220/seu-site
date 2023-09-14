@@ -23,7 +23,7 @@ const NavBar = () => {
         <Link  className="hover:text-blue-500 hover:underline" to="/android">Android</Link>
       </li>
       <li className="relative">
-        <Link  className="hover:text-blue-500 hover:underline" to="/gallery">Gallery</Link>
+        <Link  className="hover:text-blue-500 hover:underline" to="/galleryPage">Gallery</Link>
       </li>
       <li tabIndex={0}>
         <details>

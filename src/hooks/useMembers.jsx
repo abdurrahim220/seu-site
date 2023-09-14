@@ -9,7 +9,8 @@ const useMembers = () => {
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
-                setMembers(data);               
+                setMembers(data);
+                setLoading(false)             
             })
     }, [loading]);
     return [members, setLoading,setMembers];

@@ -27,7 +27,7 @@ const AndroidCommunity = () => {
             <p className='text-[#777777] mt-4 mb-3'>Replenish him third creature and meat blessed void a fruit gathered you’re, they’re two
               waters own morning gathered greater shall had behold had seed.</p>
           </div>
-          <div className='grid grid-cols-1 container mx-auto justify-center gap-3 md:grid-cols-3 justify-items-center mt-5 px-36'>
+          <div className='grid grid-cols-1 container mx-auto justify-center gap-3 md:grid-cols-3 justify-items-center mt-5 py-10 px-36'>
             {
               androids.map(data => {
                 return <AndroidCard key={data._id} data={data} />

@@ -16,7 +16,7 @@ const Events = () => {
       .then(res => res.json())
       .then(data => {
         setEvents(data)
-       // console.log(data)
+       console.log(data)
       })
   }, []);
 
@@ -31,7 +31,7 @@ const Events = () => {
       <PageBanner img={eventsimg} title={"Seu Events"} description={"All Types of events are here"}/>
 
 
-      <div className='my-10'>
+      <div className='py-10 bg-[#adb5bd]'>
 
 
 

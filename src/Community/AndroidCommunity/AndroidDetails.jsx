@@ -14,10 +14,10 @@ const AndroidDetails = () => {
     const data = useLoaderData()
     const { user } = useContext(AuthContext);
     const location = useLocation();
-    const [,refetch]=useAndroid();
+    const [, refetch] = useAndroid();
     const navigate = useNavigate();
-    
-    const { courseName, courseCode, instructor, startDate, endDate, schedule, totalClasses, totalDurationWeeks, description, prerequisites, topicsCovered, learningObjectives, resources, price,_id} = data;
+
+    const { courseName, courseCode, instructor, startDate, endDate, schedule, totalClasses, totalDurationWeeks, description, prerequisites, topicsCovered, learningObjectives, resources, price, _id } = data;
 
     const { textbooks, onlineResources } = resources;
 
@@ -36,9 +36,9 @@ const AndroidDetails = () => {
                 body: JSON.stringify(dataItem)
 
             }).then(res => res.json()).then(data => {
-                 // refetch cart to update the number of cart
-               
-            if (data.insertedId) {
+                // refetch cart to update the number of cart
+
+                if (data.insertedId) {
                     refetch()
                     Swal.fire({
                         position: 'top-end',
@@ -75,74 +75,89 @@ const AndroidDetails = () => {
     return (
         <div className='bg-[#f0f5fb]'>
             <PageBanner />
-            <div>
-                <div><h1 className='flex justify-center items-center'>Learn User Interface and
-                    User Experience</h1></div>
 
-                <div className='container bg-white grid   mx-auto'>
-                    <h1>{courseName}</h1>
-                    <p>{description}</p>
 
+            <div className='flex justify-center py-10 items-center'>
+                <h1 className='text-2xl lg:text-4xl'>Learn User Interface and User Experience</h1>
+            </div>
+            <div className="grid grid-cols-1 max-w-screen-lg pb-12 rounded-sm mx-auto gap-4 lg:grid-cols-3 lg:gap-8">
+                <div className="h-auto max-w-screen-md rounded-lg bg-gray-100 lg:col-span-2">
                     <div>
-                        <h1>What you will learn?</h1>
-                        <ul>
-                            {
-                                learningObjectives.map(data => {
-                                    return <li className='px-5 flex gap-1 items-center'><FcCheckmark />{data}</li>
-                                })
-                            }
-                        </ul>
-                    </div>
-                    <div>
-                        <h1>Requirements</h1>
-                        <ul>
-                            {
-                                prerequisites.map(data => {
-                                    return <li className='px-5 flex gap-1 items-center'><FcCheckmark />{data}</li>
-                                })
-                            }
-                        </ul>
-                    </div>
-                    <div>
-                        <h1>Resources</h1>
-                        <ul>
-                            {
-                                textbooks.map(data => {
-                                    return <li className='px-5 flex gap-1 items-center'><SiMdbook />{data}</li>
-                                })
-                            }
-                        </ul>
-                    </div>
-                    <div>
-                        <h1>Topic Will be Covered</h1>
-                        {
-                            topicsCovered.map(data => {
-                                return <li className='px-5 flex gap-1 items-center'><MdOutlineTopic />{data}</li>
-                            })
-                        }
-                    </div>
-                    <div>
-                        <h1>Class Time</h1>
-                        {
-                            days.map(data => {
-                                return <li className='px-5 flex gap-1 items-center'><AiOutlineSchedule />{data}</li>
-                            })
-                        }
-                    </div>
+                        <div className='bg-white grid  px-5 py-5 mx-auto'>
+                            <h1 className='text-[18px] font-bold py-2 leading-3'>{courseName}</h1>
+                            <p className='text-[14px] py-2 leading-3'>{description}</p>
 
-                </div>
-                {/* //todo : instructor page */}
-                {/* <div>
+                            <div>
+                                <h1 className='text-[18px] font-bold leading-3 py-4'>What you will learn?</h1>
+                                <ul className='text-[14px] leading-3'>
+                                    {
+                                        learningObjectives.map(data => {
+                                            return <li className='px-5 py-1 flex gap-1 leading-3 items-center'><FcCheckmark />{data}</li>
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                            <div>
+                                <h1 className='text-[18px] font-bold leading-3 py-4'>Requirements</h1>
+                                <ul className='text-[14px] leading-3'>
+                                    {
+                                        prerequisites.map(data => {
+                                            return <li className='px-5 py-1  flex gap-1 items-center'><FcCheckmark />{data}</li>
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                            <div>
+                                <h1 className='text-[18px] font-bold leading-3 py-4'>Resources</h1>
+                                <ul className='text-[14px] leading-3'>
+                                    {
+                                        textbooks.map(data => {
+                                            return <li className='px-5 py-1 flex gap-1 items-center'><SiMdbook />{data}</li>
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                            <div>
+                                <h1 className='text-[18px] font-bold leading-3 py-4'>Topic Will be Covered</h1>
+                                {
+                                    topicsCovered.map(data => {
+                                        return <li className='px-5 py-1 flex gap-1 items-center'><MdOutlineTopic />{data}</li>
+                                    })
+                                }
+                            </div>
+                            <div>
+                                <h1 className='text-[18px] font-bold leading-3 py-4'>Class Time</h1>
+                                {
+                                    days.map(data => {
+                                        return <li className='px-5 py-1 flex gap-1 items-center'><AiOutlineSchedule />{data}</li>
+                                    })
+                                }
+                            </div>
+
+                        </div>
+                        {/* //todo : instructor page */}
+                        {/* <div>
                     {
                         instructor.forEach(data,index=>{
                             return <Card key={index} data={data}></Card>
                         })
                     }
                 </div> */}
-            </div>
-            <div>
-                <div className="card-actions">
-                    <button onClick={() => handleAddToCart(data)} className="btn btn-outline border-0 border-b-4 mt-4">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div className="h-screen  rounded-lg ">
+                    <div className="card w-96 bg-base-100">
+                        <div className="card-body">
+                            <h2 className="card-title">Name: {courseName}</h2>
+                            <p className="card-title">Course Code : {courseCode}</p>
+                            <p className="card-title">Price : {price}</p>
+                            <div className="card-actions flex justify-center items-center">
+                                <button onClick={() => handleAddToCart(data)} className="btn btn-outline border-0 border-b-4 mt-4">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
