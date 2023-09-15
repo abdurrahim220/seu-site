@@ -67,14 +67,24 @@ const About = () => {
 
         <div className='lg:pt-[176px] pb-16 py-16'>
           <div className='max-w-screen-lg	 px-2 bg-white relative font-poppins mx-auto py-10'>
-            <div className='lg:-top-24 -top-12 lg:text-[7.2rem]  text-[3.6rem] text-rose-200	 absolute lg:right-7'>2023</div>
+            <div className='lg:-top-24 -top-12 lg:text-[7.2rem]  text-[3.6rem] text-rose-200	absolute lg:right-7'
+              data-aos="fade-down"
+            >2023</div>
 
-            <img className='lg:float-left lg:w-[400px] lg:mr-4 lg:-ml-24 lg:-mt-24' src="https://codeboxr.net/themedemo/unialumni/html/assets/images/about-page/about-img-1.jpg" alt="" srcset="" />
+            <img data-aos="fade-right" className='lg:float-left lg:w-[400px] lg:mr-4 lg:-ml-24 lg:-mt-24' src="https://codeboxr.net/themedemo/unialumni/html/assets/images/about-page/about-img-1.jpg" alt="" srcset="" />
 
             <h1 className='font-bold text-2xl py-1 lg:text-[2.6rem] lg:py-5'>Our New Genaretion</h1>
-            <p className='clear-none  whitespace-normal lg:text-[16px] py-1'>Aenean viverra rhoncus sspede. Phasellssus leo dolor, tempus non, auctor endreritquis, nisi. Fusce neque. Donec vitae orci sed dolor rutrum ausssctor. Sedfringilla mauris sit amet nibh.</p>
+            <p className='clear-none  whitespace-normal lg:text-[16px] py-1'
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
 
-            <p className="lg:px-5 clear-none whitespace-normal lg:text-[16px] py-1" >Etiam rhoncus. Ut lddffdfqwqeo. Morbi mollis tellus ac sapien. Fusce fermentum oonec arcu. Quisque manisl idUt leo. Morbi mollis tellus ac sapien. Fusce fermentum oo nec ante tempus hendrerit. Curabitur at lacus ac velit ornare lobortis. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
+            >Aenean viverra rhoncus sspede. Phasellssus leo dolor, tempus non, auctor endreritquis, nisi. Fusce neque. Donec vitae orci sed dolor rutrum ausssctor. Sedfringilla mauris sit amet nibh.</p>
+
+            <p className="lg:px-5 clear-none whitespace-normal lg:text-[16px] py-1"
+              data-aos="zoom-out-right"
+              data-aos-offset="0"
+
+            >Etiam rhoncus. Ut lddffdfqwqeo. Morbi mollis tellus ac sapien. Fusce fermentum oonec arcu. Quisque manisl idUt leo. Morbi mollis tellus ac sapien. Fusce fermentum oo nec ante tempus hendrerit. Curabitur at lacus ac velit ornare lobortis. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
               turpis. Quisque id mi.Aenean viverra rhoncus pede. Phasellus leo dolor, tempus non, auctor endrerit quis, nisi.
               Fusce neque. Donec vitae orci sed dolor rutrum auctor. Sed fringilla mauris sit amet
               nibh.Etiam rhoncus. Ut leo. Morbi mollis tellus ac sapien. Fusce fermentum oo nec arcu.
@@ -112,12 +122,13 @@ const About = () => {
           <div className='max-w-screen-lg	 px-2 bg-white relative font-poppins mx-auto py-10'>
             <div className='lg:-top-24 -top-12 lg:text-[7.2rem]  text-[3.6rem] text-rose-200	 absolute lg:right-7'>2023</div>
 
-            <img className='lg:float-left lg:w-[400px] lg:mr-4 lg:-ml-24 lg:-mt-24' src="https://codeboxr.net/themedemo/unialumni/html/assets/images/about-page/about-img-3.jpg" alt="" srcset="" />
+            <img  className='lg:float-left lg:w-[400px] lg:mr-4 lg:-ml-24 lg:-mt-24' src="https://codeboxr.net/themedemo/unialumni/html/assets/images/about-page/about-img-3.jpg" alt="" srcset="" />
 
             <h1 className='font-bold text-2xl py-1 lg:text-[2.6rem] px-5 lg:py-5'>Our New Genaretion</h1>
-            <p className='clear-none  whitespace-normal px-5 text-[16px] py-1'>Aenean viverra rhoncus sspede. Phasellssus leo dolor, tempus non, auctor endreritquis, nisi. Fusce neque. Donec vitae orci sed dolor rutrum ausssctor. Sedfringilla mauris sit amet nibh.</p>
+            <p  className='clear-none  whitespace-normal px-5 text-[16px] py-1'>Aenean viverra rhoncus sspede. Phasellssus leo dolor, tempus non, auctor endreritquis, nisi. Fusce neque. Donec vitae orci sed dolor rutrum ausssctor. Sedfringilla mauris sit amet nibh.</p>
 
-            <p className="px-5 clear-none whitespace-normal text-[16px] py-1" >Etiam rhoncus. Ut lddffdfqwqeo. Morbi mollis tellus ac sapien. Fusce fermentum oonec arcu. Quisque manisl idUt leo. Morbi mollis tellus ac sapien. Fusce fermentum oo nec ante tempus hendrerit. Curabitur at lacus ac velit ornare lobortis. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
+            <p 
+              className="px-5 clear-none whitespace-normal text-[16px] py-1" >Etiam rhoncus. Ut lddffdfqwqeo. Morbi mollis tellus ac sapien. Fusce fermentum oonec arcu. Quisque manisl idUt leo. Morbi mollis tellus ac sapien. Fusce fermentum oo nec ante tempus hendrerit. Curabitur at lacus ac velit ornare lobortis. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
               turpis. Quisque id mi.Aenean viverra rhoncus pede. Phasellus leo dolor, tempus non, auctor endrerit quis, nisi.
               Fusce neque. Donec vitae orci sed dolor rutrum auctor. Sed fringilla mauris sit amet
               nibh.Etiam rhoncus. Ut leo. Morbi mollis tellus ac sapien. Fusce fermentum oo nec arcu.
