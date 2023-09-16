@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
-import { FaTachometerAlt, FaUser } from 'react-icons/fa'
+import { FaTachometerAlt, FaUser,FaRegFolderOpen } from 'react-icons/fa'
 import { TbLogout2 } from 'react-icons/tb'
 import { ImCart } from 'react-icons/im'
 import { FiLogIn } from 'react-icons/fi'
@@ -20,7 +20,7 @@ const Dashboard = () => {
 
             })
             .catch(error => {
-                console.log(error);
+                // console.log(error);
             })
     }
 
@@ -36,11 +36,8 @@ const Dashboard = () => {
             </div>
             <div className="drawer-side ">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                <ul className="menu p-4 w-80 h-[100vh] bg-gray-400  text-base-content">
-                    <div className='grid items-center justify-center py-[30px] border-b-2 border-[#ededed]/[0.3]'>
-                        <h1 className='text-white lg:text-[18px] leading-[24px] font-extrabold cursor-pointer'>Admin Panel</h1>
-
-                    </div>
+                <ul className="menu p-4 w-80 h-screen bg-gray-400  text-base-content">
+                    
                     {
                         user && <div className='flex items-center gap-1 justify-center py-[10px] border-b-2 border-[#ededed]/[0.3]'>
 
@@ -53,14 +50,12 @@ const Dashboard = () => {
 
                         </div>
                     }
-                    <div className='flex text-white items-center gap-4 justify-center py-[20px] border-b-2 border-[#ededed]/[0.3]'>
-                        <FaTachometerAlt />
-                        <p className='text-[14px] font-bold leading-5'>Dashboard</p>
-                    </div>
+                   
 
                     <div className='grid text-white items-center gap-4 justify-center py-[20px] border-b-2 border-[#ededed]/[0.3]'>
                         <li><NavLink to='userCart'><ImCart />Cart <div class="badge badge-secondary">+{carts?.length}</div></NavLink></li>
                         <li><NavLink to='allUser'><FaUser />All user</NavLink></li>
+                        <li><NavLink to='allDashboard'><FaRegFolderOpen />Dashboard</NavLink></li>
                         <li><NavLink to='postJobs'><FaUser />Post Jobs</NavLink></li>
                         <li><NavLink to='postEvents'><FcSurvey />Post Events</NavLink></li>
                         <li><NavLink to='postCourse'><FaUser />Post Course</NavLink></li>

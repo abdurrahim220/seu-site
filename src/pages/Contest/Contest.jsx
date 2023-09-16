@@ -63,7 +63,7 @@ const Contest = () => {
 
                 <section className='pt-28 bg-sky-50 font-poppins'>
                     <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-                        <div className="h-auto max-w-screen-lg mx-auto rounded-lg  lg:col-span-2">
+                        <div className="h-auto max-w-screen-lg mx-auto rounded-lg lg:order-1 order-2 lg:col-span-2">
                             <h1 className='text-center lg:text-3xl text-[16px] font-bold pt-8 pb-10'>Some Problem Solver List</h1>
 
                             <div className="grid pt-16 grid-cols-1 gap-3 md:grid-cols-3">
@@ -92,7 +92,7 @@ const Contest = () => {
                             </div>
                         </div>
 
-                        <div className="h-auto rounded-lg">
+                        <div className="h-auto rounded-lg lg:order-2 order-1">
 
                             <div className="card w-96 bg-base-100 my-10">
                                 <div className="card-body">

@@ -46,7 +46,7 @@ const PostCourse = () => {
         data.price = parseFloat(data.price);
 
 
-        fetch("http://localhost:5000/addAndroid", {
+        fetch("http://localhost:5000/android", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

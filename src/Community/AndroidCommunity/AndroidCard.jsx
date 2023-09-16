@@ -25,9 +25,6 @@ const AndroidCard = ({ data }) => {
       </div>
     </div>
 
-
-
-
   )
 }
 

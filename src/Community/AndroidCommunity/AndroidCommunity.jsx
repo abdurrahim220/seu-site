@@ -4,18 +4,10 @@ import AndroidCard from './AndroidCard';
 
 import coverImg from '../../assets/Roboto/guido-coppa-n-KQ4-VY6Yg-unsplash.jpg'
 import PageTransition from '../../hooks/PageTransition';
+import useAndroidFetch from '../../hooks/useAndroidFetch';
 
 const AndroidCommunity = () => {
-
-  const [androids, setAndroids] = useState([]);
-  useEffect(() => {
-    fetch('http://localhost:5000/android').
-      then(res => res.json())
-      .then(data => {
-        setAndroids(data)
-        console.log(data)
-      })
-  }, [])
+  const [androids] = useAndroidFetch()
 
   return (
     <PageTransition>

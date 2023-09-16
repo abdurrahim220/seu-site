@@ -64,21 +64,14 @@ const GalleryPage = () => {
             </div>
 
             <div className='py-16 bg-sky-50 font-roboto'>
-                <div className='max-w-screen-lg mx-auto'
-                    data-aos="fade-up-right"
-                >
+                <div className='max-w-screen-lg mx-auto' >
                     <div className='flex py-2 justify-between'>
                         <p className='grid divide-y-2 lg:text-5xl'>Our last Meetup in 2018</p>
                         <Link to="/gallery" className='btn btn-success'>View Album</Link>
                     </div>
                     <p className='py-2'>Etiam vitae tortor. Curabitur nisi. In hac habitasse platea dictumst. Praesent ac massa at ligula laoreet iaculis. Praesent ac massa at ligula laoreet iaculis. sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit amet eros. Nullam quis ante. Curabitur vestibulum.</p>
 
-                    <div class="grid grid-cols-2 lg:grid-cols-4 py-10 gap-4"
-                        data-aos="fade-right"
-                        data-aos-offset="300"
-                        data-aos-easing="ease-in-sine"
-
-                    >
+                    <div class="grid grid-cols-2 lg:grid-cols-4 py-10 gap-4">
                         {
                             galleries.slice(0, 8).map(data => {
                                 return <div className='grid gap-4'>
@@ -92,21 +85,15 @@ const GalleryPage = () => {
                     </div>
 
                 </div>
-                <div className='max-w-screen-lg mx-auto py-10'
-                    data-aos="fade-up-left"
-                >
+
+                <div className='max-w-screen-lg mx-auto py-10' >
                     <div className='flex py-2 justify-between'>
                         <p className='grid divide-y-2 lg:text-5xl'>Our last Meetup in 2023</p>
                         <Link to="/gallery" className='btn btn-success'>View Album</Link>
                     </div>
                     <p className='py-2'>Etiam vitae tortor. Curabitur nisi. In hac habitasse platea dictumst. Praesent ac massa at ligula laoreet iaculis. Praesent ac massa at ligula laoreet iaculis. sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit amet eros. Nullam quis ante. Curabitur vestibulum.</p>
 
-                    <div class="grid grid-cols-2 lg:grid-cols-4 py-10 gap-4"
-
-                        data-aos="fade-left"
-                        data-aos-easing="ease-in-sine"
-                        data-aos-duration="300"
-                    >
+                    <div class="grid grid-cols-2 lg:grid-cols-4 py-10 gap-4">
                         {
                             galleries.slice(0, 8).map(data => {
                                 return <div className='grid gap-4'>

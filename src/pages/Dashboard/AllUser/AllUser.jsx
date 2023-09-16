@@ -12,7 +12,7 @@ const AllUser = () => {
   // console.log(members)
 
   const handleDelete = (member) => {
-    console.log(member);
+    // console.log(member);
     Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",

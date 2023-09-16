@@ -24,6 +24,8 @@ import PostEvents from "../pages/Dashboard/PostEvents/PostEvents";
 import PostCourse from "../pages/Dashboard/PostCourse/PostCourse";
 import PostNews from "../pages/Dashboard/PostNews/PostNews";
 import GalleryPage from "../pages/Gallery/GalleryPage";
+import AdminDashboard from "../pages/Dashboard/AdminDashboard/AdminDashboard";
+import AllAndroidCourse from "../pages/Dashboard/PostCourse/AllAndroidCourse";
 
 const router = createBrowserRouter([
 
@@ -80,6 +82,11 @@ const router = createBrowserRouter([
         element: <UserCart />
       },
       {
+        path: 'allDashboard',
+        element: <AdminDashboard />
+      },
+      
+      {
         path: 'allUser',
         element: <AllUser />
       },
@@ -89,7 +96,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'postCourse',
-        element: <PostCourse />
+        element: <AllAndroidCourse/>
 
       },
       {
